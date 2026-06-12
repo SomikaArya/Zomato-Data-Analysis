@@ -1,40 +1,79 @@
-# 🍽️ Zomato Data Analysis Using Python
+# Zomato Data Analysis Using Python
 
-## 📌 Project Overview
+## Project Overview
 
-This project focuses on analyzing Zomato restaurant data using Python to understand customer preferences, restaurant trends, and ordering behavior. Through data cleaning, exploratory data analysis (EDA), and data visualization, the project uncovers valuable insights that can help restaurants improve their services and make data-driven business decisions.
+This project focuses on analyzing Zomato restaurant data using Python to understand customer preferences, restaurant trends, and ordering behavior. Through data cleaning, visualization, and exploratory data analysis (EDA), the project uncovers valuable insights that can help restaurant owners and business analysts make informed decisions.
 
 The analysis aims to answer questions such as:
 
 * Do more restaurants provide online ordering compared to offline services?
 * Which restaurant categories are most popular among customers?
-* What price range do couples prefer for dining?
-* How do restaurant ratings differ between online and offline ordering?
+* What is the preferred dining budget for couples?
+* How do restaurant ratings vary between online and offline order services?
 * Which restaurants receive the highest customer votes?
 
----
+## Dataset Description
 
-# 📊 Dataset Description
+The dataset contains information about restaurants listed on Zomato, including their ratings, order availability, pricing, customer votes, and restaurant categories.
 
-The dataset contains information about restaurants listed on Zomato, including ratings, customer votes, pricing, restaurant categories, and online ordering facilities.
+### Columns Description
 
-## 📋 Columns Description
+### Name
 
-| Column Name                      | Description                                      | Data Type |
-| -------------------------------- | ------------------------------------------------ | --------- |
-| **Name**                         | Name of the restaurant                           | Text      |
-| **Online Order**                 | Whether online ordering is available (Yes/No)    | Text      |
-| **Book Table**                   | Whether table booking is available (Yes/No)      | Text      |
-| **Rate**                         | Customer rating of the restaurant                | Numeric   |
-| **Votes**                        | Total number of customer votes                   | Number    |
-| **Approx Cost (for Two People)** | Estimated dining cost for two people             | Number    |
-| **Listed In (Type)**             | Restaurant category (Dining, Café, Buffet, etc.) | Text      |
+**Description:** Name of the restaurant.
+**Type:** Text
 
----
+### Online Order
 
-# 🛠️ Project Workflow
+**Description:** Indicates whether the restaurant accepts online orders.
+**Values:**
 
-## 1️⃣ Import Required Libraries
+* Yes
+* No
+  **Type:** Text
+
+### Book Table
+
+**Description:** Indicates whether table booking is available.
+**Values:**
+
+* Yes
+* No
+  **Type:** Text
+
+### Rate
+
+**Description:** Average customer rating of the restaurant.
+**Type:** Numeric (converted from text format)
+
+### Votes
+
+**Description:** Number of customer votes received by the restaurant.
+**Type:** Number
+
+### Approx Cost (for Two People)
+
+**Description:** Estimated cost for two people dining together.
+**Type:** Number
+
+### Listed In (Type)
+
+**Description:** Category of the restaurant.
+**Examples:**
+
+* Dining
+* Café
+* Buffet
+* Desserts
+* Drinks & Nightlife
+* Pubs and Bars
+* Delivery
+
+**Type:** Text
+
+## Project Workflow
+
+### 1. Import Required Libraries
 
 The project uses the following Python libraries:
 
@@ -43,22 +82,20 @@ The project uses the following Python libraries:
 * Matplotlib
 * Seaborn
 
-## 2️⃣ Load the Dataset
+### 2. Load the Dataset
 
-The Zomato dataset is imported into a Pandas DataFrame for further analysis.
+The CSV dataset is imported into a Pandas DataFrame for analysis.
 
-## 3️⃣ Data Cleaning and Preparation
+### 3. Data Cleaning and Preparation
 
-The following preprocessing steps are performed:
-
-* Converted the `rate` column from text format (e.g., `4.2/5`) into numeric values.
+* Converted the `rate` column from string format (e.g., `4.2/5`) to floating-point values.
 * Verified dataset structure using `info()`.
 * Checked for missing or null values.
 * Ensured data consistency before analysis.
 
-## 4️⃣ Exploratory Data Analysis (EDA)
+### 4. Exploratory Data Analysis
 
-Several analyses were performed, including:
+The project includes several analyses:
 
 * Distribution of restaurant categories.
 * Total customer votes by restaurant type.
@@ -66,24 +103,20 @@ Several analyses were performed, including:
 * Comparison of online and offline ordering availability.
 * Distribution of restaurant ratings.
 * Analysis of preferred spending range for couples.
-* Comparison of ratings between restaurants with and without online ordering.
-* Relationship between restaurant type and online ordering using a heatmap.
+* Comparison of ratings between online-order and offline-order restaurants.
+* Relationship between restaurant type and online ordering using heatmaps.
 
----
+## Key Insights
 
-# 📈 Key Insights
+* Most restaurants belong to the **Dining** category.
+* Dining restaurants receive the highest number of customer votes.
+* A majority of restaurants do **not** offer online ordering.
+* Most restaurant ratings fall between **3.5 and 4.0**.
+* Couples generally prefer restaurants with an approximate cost of **₹300 for two people**.
+* Restaurants that provide online ordering generally receive better customer ratings than those relying only on offline orders.
+* Customers tend to prefer **offline dining at restaurants** while **cafés receive more online orders**, indicating different customer behavior across restaurant types.
 
-* 🍴 The majority of restaurants belong to the **Dining** category.
-* ⭐ Dining restaurants receive the highest number of customer votes.
-* 🚫 Most restaurants do **not** offer online ordering facilities.
-* 📊 The majority of restaurant ratings fall between **3.5 and 4.0**.
-* 💰 Couples generally prefer restaurants with an approximate cost of **₹300 for two people**.
-* 📱 Restaurants offering online ordering tend to receive higher customer ratings than offline-only restaurants.
-* ☕ Customers prefer ordering online from cafés, while dining restaurants are more commonly visited in person.
-
----
-
-# 💻 Technologies Used
+## Technologies Used
 
 * Python
 * Pandas
@@ -92,10 +125,9 @@ Several analyses were performed, including:
 * Seaborn
 * Jupyter Notebook / Google Colab
 
----
+## Conclusion
 
-# 🎯 Conclusion
-
-This project demonstrates the power of Exploratory Data Analysis (EDA) in extracting meaningful insights from restaurant data. By analyzing customer behavior, pricing patterns, restaurant categories, and online ordering trends, businesses can make informed decisions to enhance customer satisfaction and improve operational strategies.
+This project demonstrates how Exploratory Data Analysis (EDA) can transform raw restaurant data into actionable business insights. By analyzing customer preferences, pricing trends, restaurant categories, and online ordering behavior, businesses can better understand market demand and improve their services based on data-driven decisions.
+operational strategies.
 
 The findings provide valuable information for restaurant owners, food delivery platforms, and business analysts looking to understand consumer preferences and optimize their services.
