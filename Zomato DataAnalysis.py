@@ -2,7 +2,7 @@
 """
 Created on Fri Jun 12 16:10:57 2026
 
-@author: princ
+@author: Somika Arya
 """
 
 import pandas as pd
@@ -75,5 +75,8 @@ sns.heatmap(pivot_table, annot=True, cmap='YlGnBu', fmt='d')
 plt.title('Heatmap')
 plt.xlabel('Online Order')
 plt.ylabel('Listed In (Type)')
+plt.show()
+
+
 plt.show()
 
